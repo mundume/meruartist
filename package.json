@@ -13,7 +13,7 @@
     "vite": "^2.4.4"
   },
   "dependencies": {
-    "lightgallery": "^2.7.1",
-    "motion": "^10.15.5"
+    "motion": "^10.15.5",
+    "photoswipe": "^5.3.6"
   }
 }

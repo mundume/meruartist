@@ -10,6 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link type="text/css" rel="stylesheet" href="css/lightgallery-bundle.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meru Artist</title>
   </head>
@@ -59,7 +60,7 @@
                 </h4>
               </div>
               <div class="font-bold">
-                <a href="#" class="">
+                <a href="#gallery" class="">
                   <button
                     class="w-24 p-2 mr-2 font-sans font-semibold text-transparent transition-all duration-75 border rounded-md bg-clip-text bg-gradient-to-r from-amber-500 to-pink-500"
                   >
@@ -163,13 +164,112 @@
       </section>
       <section class="block m-auto text-center">
         <div
-          class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-rose-300"
+          class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-rose-300"
         >
           Our Fleets
         </div>
       </section>
+      <section id="gallery">
+        <h1
+          class="block m-auto text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-rose-300"
+        >
+          Our Gallery
+        </h1>
+        <div id="app">
+          <div
+            class="sm:grid sm:grid-cols-2 md:grid-cols-3 pswp-gallery"
+            id="my-gallery"
+          >
+            <a
+              href="/src/assets/meru1.jpg"
+              data-pswp-width="2500"
+              data-pswp-height="1200"
+              target="_blank"
+            >
+              <img
+                src="/src/assets/meru1.jpg"
+                alt=""
+                class="object-cover w-full p-4 rounded-md h-80"
+              />
+            </a>
+            <a
+              href="/src/assets/meru2.jpg"
+              data-pswp-width="2500"
+              data-pswp-height="1200"
+              target="_blank"
+            >
+              <img
+                src="/src/assets/meru2.jpg"
+                alt=""
+                class="object-cover w-full p-4 rounded-md h-80"
+              />
+            </a>
+            <a
+              href="/src/assets/meru3.jpg"
+              data-pswp-width="1666"
+              data-pswp-height="2500"
+              target="_blank"
+            >
+              <img
+                src="/src/assets/meru3.jpg"
+                alt=""
+                class="w-full p-4 rounded-md"
+              />
+            </a>
+            <a
+              href="/src/assets/meru3.jpg"
+              data-pswp-width="1666"
+              data-pswp-height="2500"
+              target="_blank"
+            >
+              <img
+                src="/src/assets/meru4.jpg"
+                alt=""
+                class="w-full p-4 rounded-md"
+              />
+            </a>
+            <a
+              href="/src/assets/meru4.jpg"
+              data-pswp-width="1666"
+              data-pswp-height="2500"
+              target="_blank"
+            >
+              <img
+                src="/src/assets/meru5.jpg"
+                alt=""
+                class="w-full p-4 rounded-md"
+              />
+            </a>
+            <a
+              href="/src/assets/meru6.jpg"
+              data-pswp-width="1666"
+              data-pswp-height="2500"
+              target="_blank"
+            >
+              <img
+                src="/src/assets/meru6.jpg"
+                alt=""
+                class="w-full p-4 rounded-md"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+    <script type="module">
+      import PhotoSwipeLightbox from "photoswipe/lightbox";
+      import "photoswipe/style.css";
 
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: "#my-gallery",
+        children: "a",
+        pswpModule: () => import("photoswipe"),
+      });
+
+      lightbox.init();
+    </script>
     <script type="module" src="./src/main.js"></script>
+
+    <!-- lightgallery plugins -->
   </body>
 </html>
